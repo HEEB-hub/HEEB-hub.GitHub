@@ -1,0 +1,65 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.0.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      lowDimensionProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+lowDimensionField   C;     //scalar field selected for processing
+
+lowDimensionMethod direct; //automatic; 
+                           // two modes including 'direct' and 'automatic'
+						  
+printCoeffs         on;    //whether to print the settings; 
+                           //'on' and 'off'
+
+ldDataOutput        off;   //whether to create and output the low-dimension  
+                           //mesh and field in ./LD folder.
+
+directCoeffs               //low-dimension settings for 'direct' processing; 
+{
+lowDimensionSet  (3 3 2); //lowdimensionSet of (a b c) means 
+                          //a*b*c zones in x,y,z direction.                     
+}
+
+automaticCoeffs           //low-dimension settings for 'automatic' processing; 
+{
+  lowDimensionSet  (1 1 1); //initial low-dimension magnitude;
+
+  errorLimit        0.2;    //relative error criterion for quit; 
+                            //0~1, 0.2 means 20% percent error; 
+
+  updateRatio       1;      //increase speed of the lowDimension magnitude; 
+                            //any positive value; 
+			    //suggest 0.5~1 for precise, >2 for speed;
+
+  maxStep           10;     //update Step limitation for quit;
+                            //positive integer only;
+}
+
+nonUniformDivide    off;   //whether to apply the non-uniform method;
+
+nonUniformCoeffs           //low-dimension settings for non-uniform 
+{
+  dividePriority     accuracy;//default as accuracy;
+
+  minZoneThick       (0.05 0.05 0.05);
+                     //minimum thickness of zones, dimensionless. 0.05 means 5%;
+                     //normalized to the total length of each direction of the domain;
+
+  subLayerThick      (1 1 1); 
+                     //dimensionless size of sublayer thickness; 
+                     //normalized to the maximum length of grids in each direction;      
+}
+
+// ************************************************************************* //

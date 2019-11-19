@@ -1,0 +1,4 @@
+<map id="Foam::incompressible::lowDimensionMethod::directLowDimension::~directLowDimension" name="Foam::incompressible::lowDimensionMethod::directLowDimension::~directLowDimension">
+<area shape="rect" id="node2" href="$class_foam_1_1incompressible_1_1low_dimension_method_1_1direct_low_dimension.html#a51f9c008b273c741c9dbd0c73f9a80ca" title="decide whether to update the settings decide whether to update the low&#45;dimension settings, default as false for the class reloaded version of the abstract base class " alt="" coords="209,5,365,76"/>
+<area shape="rect" id="node3" href="$class_foam_1_1incompressible_1_1low_dimension_method_1_1direct_low_dimension.html#ad83748ebe15071d1f8dd23908a921bbc" title="show the releated result information show the process information and results reloaded version of the..." alt="" coords="209,100,365,171"/>
+</map>

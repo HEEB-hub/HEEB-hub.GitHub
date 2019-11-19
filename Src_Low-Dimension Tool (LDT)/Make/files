@@ -1,0 +1,11 @@
+src/lowDimensionMethod/lowDimensionMethod.C
+src/directLowDimension/directLowDimension.C
+src/automaticLowDimension/automaticLowDimension.C
+src/nonUniformMethod/nonUniformMethod.C
+src/ioLowDimension/ioLowDimension.C
+src/lowDimensionTool.C
+
+EXE = $(FOAM_USER_APPBIN)/lowDimensionTool
+
+
+
