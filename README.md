@@ -1,4 +1,4 @@
-# Hub of HEEB.
+# HEEB-Hub.
 
 It is the hub repository of Healthy and Energy Efficient Building (HEEB) Research Team!
 Aiming to distribute the open-source projects finished by HEEB Team.
